@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pringles Math</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../Style/Style.css">
+
+    <link rel="icon" href="../img/math1.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../img/math1.png" type="image/x-icon">
+</head>
+
+<body>
+    
+    <header>
+        <p id="date"></p>  
+    </header>
+    <div class="scoreSection container">
+            <div id="hideForm1">
+                <form id="form1">
+                    <label for="username">Your nickname</label>
+                    <input class="InputStyle" id="username" type="text" value="" maxlength="12"/>
+                    <button type="submit" id="submit1">
+                        <img src="../img/sendLogo.png" width="10px">
+                    </button>
+                </form>
+            </div>
+
+            <div id="hideForm2">
+                <p id="salutations"></p>
+                <button type="button" id="resetName">
+                    <img src="../img/editLogo.png" width="10px">
+                </button>
+            </div>
+        <div id="scoreSection">
+            <h1 class="titleID" id="titleScore">HIGH SCORE</h1>
+            <div id="styleHighScore">
+                <p id="userScore"></p>
+                <button type="button" id="resetScore">
+                    <img src="../img/scoreLogo.png" width="10px">
+                </button>
+            </div>
+        </div>
+    </div>
+
+        <div id="playSection">
+            <h1 id="playTitle" class="titleID">CAN YOU ANSWER?</h1>
+                <form>
+                    <select id="operatorInput" name="operator">
+                        <option value="+">+</option>
+                        <option value="-">-</option>
+                        <option selected value="x">x</option>
+                        <option value="/">/</option>
+                        <option value="%">%</option>"
+                    </select>
+
+                    <select id="difficultLevel" name="gameLevel">
+                        <option selected value="Easy">Easy</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Hard">Hard</option>
+                    </select>    
+                </form>
+
+                <p id="countdown"></p>
+                <p id="systemCalcules"></p>
+
+            <form id="form2">
+                <input class="InputStyle applyEffect" id="userAnswerInput" type="texte" value="" oninput="this.value=this.value.replace(/[^\d.-]/g,'')"/>
+                <button type="submit" id="sendInput">Validate</button>
+            </form>
+
+            <p id ="reponseSystem"></p><br>
+        </div>
+
+        <script type="module" src ="./index.js"></script>
+        <script type="module" src="../forms/form1.js"></script>
+        <script type="module" src="../forms/form2.js"></script>
+        <script type="module" src="../functions/mathLevels.js"></script>
+        <script type="module" src="../functions/dates.js"></script>
+        <script type="module" src="../functions/recalculate.js"></script>
+    </body>
+</html>
