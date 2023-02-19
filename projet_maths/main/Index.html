@@ -12,11 +12,7 @@
 </head>
 
 <body>
-    
-    <header>
-        <p id="date"></p>  
-    </header>
-    <div class="scoreSection container">
+    <div class="headers container">
             <div id="hideForm1">
                 <form id="form1">
                     <label for="username">Your nickname</label>
@@ -33,6 +29,8 @@
                     <img src="../img/editLogo.png" width="10px">
                 </button>
             </div>
+
+        
         <div id="scoreSection">
             <h1 class="titleID" id="titleScore">HIGH SCORE</h1>
             <div id="styleHighScore">
@@ -43,10 +41,10 @@
             </div>
         </div>
     </div>
-
         <div id="playSection">
-            <h1 id="playTitle" class="titleID">CAN YOU ANSWER?</h1>
-                <form>
+            <h1 id="playTitle" class="titleID wave-text">CAN YOU ANSWER?</h1>
+
+                <form id="formOperators">
                     <select id="operatorInput" name="operator">
                         <option value="+">+</option>
                         <option value="-">-</option>
@@ -62,15 +60,17 @@
                     </select>    
                 </form>
 
-                <p id="countdown"></p>
-                <p id="systemCalcules"></p>
+                <p id="systemCalcules" class="fade-text"></p>
 
             <form id="form2">
                 <input class="InputStyle applyEffect" id="userAnswerInput" type="texte" value="" oninput="this.value=this.value.replace(/[^\d.-]/g,'')"/>
-                <button type="submit" id="sendInput">Validate</button>
+                <button type="submit" id="sendInput">
+                    <img src="../img/sendLogo.png" width="10px">
+                </button>
             </form>
 
-            <p id ="reponseSystem"></p><br>
+            <p id ="reponseSystem1"></p><br>
+            <p id ="reponseSystem2"></p>
         </div>
 
         <script type="module" src ="./index.js"></script>

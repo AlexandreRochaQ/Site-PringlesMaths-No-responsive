@@ -9,7 +9,7 @@ function main() {
     } else if(scoreMain == null)  {
         document.getElementById("userScore").innerHTML = `${nicknameMain}, play to show your score` 
     } else {
-        document.getElementById("userScore").innerHTML = `${nicknameMain}, your high score was: ${scoreMain}`
+        document.getElementById("userScore").innerHTML = `[${nicknameMain}] score: ${scoreMain}`
     }
     
     if (nicknameMain == null || nicknameMain == undefined) {
@@ -22,4 +22,3 @@ function main() {
     } 
 }
 main();
-document.getElementById("salutations").innerHTML = `Hey ${nicknameMain}, are you ready for this ?`;

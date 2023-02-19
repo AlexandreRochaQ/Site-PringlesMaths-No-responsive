@@ -8,7 +8,8 @@ export var score = 0;
 
 const countDown = document.getElementById("countdown");
 const form2 = document.getElementById("form2");    
-const answer = document.getElementById("reponseSystem");
+const answer1 = document.getElementById("reponseSystem1");
+const answer2 = document.getElementById("reponseSystem2");
 const userAnswerInputJs = document.getElementById("userAnswerInput");
 
 recalculate();
@@ -24,7 +25,9 @@ document.getElementById("systemCalcules").innerHTML = `${systemCalc1} ${operator
 
         if(userAnswer == resultComparation) {
             score++;
-            answer.innerHTML = `Your answer is correct ! Your score : ${score}`;
+            answer1.innerHTML = `Your answer is correct !`;
+            answer2.innerHTML = `+1 point! Your score : ${score}`;
+
             recalculate();
             document.getElementById("systemCalcules").innerHTML = `${systemCalc1} ${operator} ${systemCalc2}`
             
@@ -35,8 +38,9 @@ document.getElementById("systemCalcules").innerHTML = `${systemCalc1} ${operator
         }
         else {
             incorrectAnswer++;
-            answer.innerHTML = `You miscalculated ${incorrectAnswer} times :/... Your score: ${score} <br> The answer was : ${systemCalc1} ${operator} ${systemCalc2} = ${resultComparation} <br>`;
-    
+            answer1.innerHTML = `The answer was : ${systemCalc1} ${operator} ${systemCalc2} = ${resultComparation} <br>`;
+            answer2.innerHTML = `You miscalculated ${incorrectAnswer} times :/... Your score: ${score}`;
+
             document.getElementsByClassName("applyEffect")[0].classList.add('answer-incorrect');
             setTimeout(() => {
             document.getElementsByClassName("applyEffect")[0].classList.remove('answer-incorrect');

@@ -1,3 +1,5 @@
+import { nicknameMain } from "../main/index.js";
+
 let day;
 
 switch(new Date().getDay()) {
@@ -24,4 +26,4 @@ switch(new Date().getDay()) {
         break;
 }
 
-document.getElementById("date").innerHTML = `Today is ${day}, math day ;D !`
+document.getElementById("salutations").innerHTML = `${day} is math day, ${nicknameMain}!`
