@@ -1,7 +1,7 @@
 export var nicknameMain = localStorage.getItem("username");
 export var scoreMain = localStorage.getItem("score");
 
-function main() {
+export function main() {
     if(scoreMain == null && nicknameMain == null) {
         document.getElementById("userScore").innerHTML = `It's so cold and empty here :'(`
     } else if (nicknameMain == null) {

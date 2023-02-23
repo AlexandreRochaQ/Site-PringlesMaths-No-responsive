@@ -2,7 +2,7 @@ import { calculations } from "../functions/calculations.js";
 import { recalculate } from "../functions/recalculate.js";
 import {systemCalc1, systemCalc2, operator} from "../functions/recalculate.js";
 import { nicknameMain} from "../main/index.js";
-
+import { main } from "../main/index.js";
 var timeLimit = 30, timeID, incorrectAnswer = 0;
 export var score = 0;
 
@@ -39,21 +39,20 @@ document.getElementById("systemCalcules").innerHTML = `${systemCalc1} ${operator
         else {
             incorrectAnswer++;
             answer1.innerHTML = `The answer was : ${systemCalc1} ${operator} ${systemCalc2} = ${resultComparation} <br>`;
-            answer2.innerHTML = `You miscalculated ${incorrectAnswer} times :/... Your score: ${score}`;
+            answer2.innerHTML = `You miscalculated ${incorrectAnswer} times!. High score: ${score}`;
 
             document.getElementsByClassName("applyEffect")[0].classList.add('answer-incorrect');
             setTimeout(() => {
             document.getElementsByClassName("applyEffect")[0].classList.remove('answer-incorrect');
             }, 500);
 
-            console.log(document.getElementsByClassName("applyEffect"));
             recalculate();
 
             document.getElementById("systemCalcules").innerHTML = `${systemCalc1} ${operator} ${systemCalc2}`
     
             if(score >= localStorage.getItem("score")) {
                 localStorage.setItem("score", score);
-                document.getElementById("userScore").innerHTML = `${nicknameMain}, your high score was: ${score}`
+                main();
                 document.getElementsByClassName("applyEffect")[0].classList.add('answer-correct');
                 setTimeout(() => {
                 document.getElementsByClassName("applyEffect")[0].classList.remove('answer-correct');
@@ -61,6 +60,7 @@ document.getElementById("systemCalcules").innerHTML = `${systemCalc1} ${operator
             }
             score = 0;
         }
+        
         userAnswer = "";  
     } 
 })

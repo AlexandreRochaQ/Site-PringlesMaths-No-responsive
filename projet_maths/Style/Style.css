@@ -4,13 +4,8 @@
 @media only screen and (max-width: 600px) {
 body {
     font-size: 16px;
-    font-family: 'Mitr', sans-serif;
-    font-weight: 500;
-    background-color: hsl(33, 100%, 86%);
-    color: #000000;
-    text-shadow: 0.5px 0.5px white;
 }
-#hideform1, #hideform2 {
+#hideForm1, #hideForm2 {
     text-align: center;
     width: 100%;
 }
@@ -24,51 +19,48 @@ body {
 }
 #reponseSystem1 {
     margin-top: -10px;
-    font-size: 35px;
+    font-size: 27px;
     font-weight: 300;
 }
 #reponseSystem2 {
     font-weight: 300;
-    margin-top: -95px;
-    font-size: 22px;
+    margin-top: -75px;
+    font-size: 15px;
 }
 }
 
 @media only screen and (min-width: 601px) {
 body {
     font-size: 18px;
-    font-family: 'Mitr', sans-serif;
-    font-weight: 500;
-    background-color: hsl(33, 100%, 86%);
-    color: #000000;
-    text-shadow: 0.5px 0.5px white;
 }
-#hideform1, #hideform2 {
+#hideForm1, #hideForm2 {
     display: inline-block;
-    width: 30%;
+    width: 50%;
     vertical-align: top;
     font-size: 25px;
+    margin-top: 10px;
 }
 #userScore {
     font-size: 20px;
     margin-top: -30px;
-    margin-right: 0px;
 }
-#scoreSection {
+#scoreSection{
     display: inline-block;
     width: 30%;
     text-align: right;
     flex-direction: row;
     font-size: 25px;
-    margin-top: -20px;
+    margin-top: -38px;
 }
 #playTitle {
     font-size: 90px;
     padding: 0%;
+    margin-bottom: 2px;
 }
 #playSection {
     font-size: 50px;
     text-align: center;
+    margin-top: -65px;
 }
 #reponseSystem1 {
     margin-top: -10px;
@@ -80,7 +72,11 @@ body {
     margin-top: -120px;
     font-size: 20px;
 }
+#styleHighScore {
+    margin-left: 0;
 }
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -90,39 +86,51 @@ body {
     color: #000000;
     text-shadow: 0.5px 0.5px white;
 }
-#titleScore {
-    font-weight: 400;
-}
-#userScore {
+
+#titleScore, 
+#userScore  {
     font-weight: 400;
 }
 #hideForm1, #hideForm2 {
-    margin-top: 13px;
+    font-size: 15px;
     font-weight: 400;
 }
 #systemCalcules {
     font-family: 'Lato', sans-serif;    
     font-weight: 700;
 }
+.titleID {
+    font-family: 'Mitr', sans-serif;
+    font-weight: 400;
+    font-size: 45px;
+}
+
 #header {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
 .container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-left: 10px;
 }
+#styleHighScore {
+    display: flex;
+    align-items: center;
+}
 
+#resetScore {
+    display: inline-block;
+    vertical-align: middle;
+    position: fixed;
+    right: 0;
+}
 .headers {
     background-color: hsl(33, 100%, 86%);
-    margin-right: 20px;
+    margin-right: 10px;
     margin-left: 20px;
-    margin-top: 10px;
-    margin-bottom: 10px;
     color: #000000;
 }
 #formOperators {
@@ -136,6 +144,18 @@ body {
     font-size: 60Px;
     margin-top: -0px;
 }
+#salutations {
+    margin-top: -0px;
+ }
+ #username {
+     width: 95.9px;
+     height: 13px;
+ }
+ #userAnswerInput {
+     width: 130px;
+     height: 13px;
+}
+
 button {
     margin: 0 10px;
     font-family: 'Mitr', sans-serif;
@@ -148,24 +168,10 @@ button {
     color: rgb(0, 0, 0);
 }
 
-#salutations {
-   margin-top: -0px;
-}
-
-#username {
-    width: 95.9px;
-    height: 13px;
-}
-
-#userAnswerInput {
-    width: 130px;
-    height: 13px;
-}
 .fade-text {
     color: rgb(0, 0, 0);
     animation: fade 2s infinite;
 }
-
 @keyframes fade {
     0% {
         opacity: 1;
@@ -177,12 +183,12 @@ button {
         opacity: 1;
     }
 }
+
 .answer-correct {
     background-color: rgb(20, 220, 140);
     text-shadow: 0.5px 0.5px rgb(0, 0, 0);
     color: rgb(20, 220, 140);
 }
-
 .answer-incorrect {
     background-color: rgb(220, 20, 60);
     text-shadow: 0.5px 0.5px rgb(0, 0, 0);
@@ -198,74 +204,43 @@ option {
     text-shadow: 0.5px 0.5px rgb(255, 255, 255);
     color: rgb(0, 0, 0);
 }
-
-.titleID {
-    font-family: 'Mitr', sans-serif;
-    font-weight: 400;
-    font-size: 45px;
-}
-
+#resetName,
+#resetScore,
+#sendInput,
+#operatorInput, 
+#difficultLevel,
 #submit1 {
     font-family: 'Mitr', sans-serif;
     font-weight: 500;
-    font-size: 10px;
     border-radius: 10px;
     background-color: #ffa43436;
     border-color: #00000000;
     text-shadow: 0.5px 0.5px rgb(255, 255, 255);
     color: rgb(0, 0, 0);
+}
+#submit1 {
     width: 32px;
     height: 27px;
     margin-left: -0px;
 }
-
 #resetName {
-    font-family: 'Mitr', sans-serif;
-    font-weight: 500;
-    border-radius: 10px;
-    background-color: #ffa43436;
-    border-color: #00000000;
-    text-shadow: 0.5px 0.5px rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
     width: 30px;
     height: 30px;
-    margin-top: 0px;
+    margin-top: -2px;
 }
-
 #resetScore {
-    font-family: 'Mitr', sans-serif;
-    font-weight: 500;
-    font-size: 10px;
-    border-radius: 10px;
-    background-color: #ffa43436;
-    border-color: #00000000;
-    text-shadow: 0.5px 0.5px rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
     width: 33px;
     height: 27px;
+    margin-top: -49px;
 }
-
 #sendInput {
-    font-family: 'Mitr', sans-serif;
-    font-weight: 500;
-    font-size: 10px;
-    border-radius: 10px;
-    background-color: #ffa43436;
-    border-color: #00000000;
-    text-shadow: 0.5px 0.5px rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
     margin-left: -10px;
 }
-
 #operatorInput, #difficultLevel {
-    font-family: 'Mitr', sans-serif;
-    font-weight: 500;
     font-size: 10px;
-    border-radius: 10px;
-    background-color: #ffa43436;
-    border-color: #00000000;
-    text-shadow: 0.5px 0.5px rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
+    outline: none;
+    font-weight: 500;
+    font-size: 13px;
 }
 
 .InputStyle{
@@ -276,23 +251,14 @@ option {
     text-shadow: 0.5px 0.5px hsl(33, 91%, 77%);
     color: hsl(0, 0%, 0%);
 }
-
 .InputStyle:hover {
     border-radius: 10px;
     border-color: #e5a5574c;
 }
-
 .InputStyle:active {
     border-radius: 10px;
     border-color: #ffa43463;
 }
-
 .InputStyle {
     outline: none;
-}
-
-#operatorInput, #difficultLevel {
-    outline: none;
-    font-weight: 500;
-    font-size: 13px;
 }
