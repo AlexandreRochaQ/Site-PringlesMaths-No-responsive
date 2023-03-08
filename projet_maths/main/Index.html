@@ -10,35 +10,45 @@
     <link rel="icon" href="../img/math1.png" type="image/x-icon">
     <link rel="shortcut icon" href="../img/math1.png" type="image/x-icon">
 </head>
-
 <body>
+    <header>
+        <nav>
+            <ul>
+              <li><a href="#container2-title">ABOUT US</a></li>
+              <li><a href="#container3-title">CONTACT US</a></li>
+            </ul>
+          </nav>
+    </header>
+    <img id="imgLogoSVG" src="../img/TP2-IntWeb-Alexandre-ROCHA.svg">
     <div class="headers container">
-            <div id="hideForm1">
-                <form id="form1">
-                    <label for="username">Your nickname</label>
-                    <input class="InputStyle" id="username" type="text" value="" maxlength="12"/>
-                    <button type="submit" id="submit1">
-                        <img src="../img/sendLogo.png" width="10px">
-                    </button>
-                </form>
-            </div>
-
-            <div id="hideForm2">
-                <p id="salutations"></p>
-                <button type="button" id="resetName">
-                    <img src="../img/editLogo.png" width="10px">
+        <div id="hideForm1">
+            <form id="form1">
+                <label for="username">Your nickname</label>
+                <input class="InputStyle" id="username" type="text" value="" maxlength="12"/>
+                <button type="submit" id="submit1">
+                    <img src="../img/sendLogo.png" width="10px">
                 </button>
-            </div>
+            </form>
+        </div>
 
-        
+        <div id="hideForm2">
+            <p id="salutations"></p>
+            <button type="button" id="resetName">
+                <img src="../img/editLogo.png" width="10px">
+            </button>
+        </div>
         <div id="scoreSection">
-            <h1 class="titleID" id="titleScore">HIGH SCORE</h1>
-            <div id="styleHighScore">
+
+            <div id="scoreContent">
+                <img id="imgScore" src="../img/trophy2.png">
+                <p id="titleScore">HIGH SCORE</p>
+            </div>
+                <div class="styleHighScore">
                 <p id="userScore"></p>
                 <button type="button" id="resetScore">
-                    <img src="../img/scoreLogo.png" width="10px">
+                    <img src="../img/scoreLogo.png" width="14px">
                 </button>
-            </div>
+            </div> 
         </div>
     </div>
         <div id="playSection">
@@ -59,20 +69,54 @@
                         <option value="Hard">Hard</option>
                     </select>    
                 </form>
-
+            <div id="playEdit">
                 <p id="systemCalcules" class="fade-text"></p>
 
-            <form id="form2">
-                <input class="InputStyle applyEffect" id="userAnswerInput" type="texte" value="" oninput="this.value=this.value.replace(/[^\d.-]/g,'')"/>
-                <button type="submit" id="sendInput">
-                    <img src="../img/sendLogo.png" width="10px">
-                </button>
-            </form>
+                <form id="form2">
+                    <input class="InputStyle applyEffect" id="userAnswerInput" type="texte" value="" oninput="this.value=this.value.replace(/[^\d.-]/g,'')"/>
+                    <button type="submit" id="sendInput">
+                        <img src="../img/sendLogo.png" width="14px">
+                    </button>
+                </form>
+                <div id="reponses">
+                    <p id ="reponseSystem1"></p>
+                    <p id ="reponseSystem2"></p>
+                </div>
+            </div>
+        </div>
+        <img class="background-image" id="imgPub1" src="../img/pringlesPub1.png">
+        <img class="background-image" id="imgPub2" src="../img/pringlesSquish.png">
 
-            <p id ="reponseSystem1"></p><br>
-            <p id ="reponseSystem2"></p>
+        <div class="container-2" id="container2-title">
+            <div id="container2-content">
+                <p id="container2-text">
+                    About fifty years ago, two avid snack enthusiasts combined their brains to create a delicious potato-based crisp that stimulates the neurons and enchants the taste buds.
+                    Escape with Pringles, a crisp in the shape of a hyperbolic paraboloid, much like the universe itself, that stacks perfectly and contours to your tongue for ultimate delight.
+                    Created with a good dose of humor and a love for fun, with a touch of seriousness and a ton of creativity.
+                </p>
+                <img class="background-image" id="imgPub3" src="../img/womanPringles.png">
+            </div>
+        </div>
+        <div class="container-3">
+            <div class="container3-content">
+                <h1 id="container3-title">CONTACT US</h1>
+                <form>
+                    <div class="container-input">
+                        <input id="container-input1" class="container-inputSub InputStyle applyEffect" type="text" name="name" placeholder="name" required>
+                        <input id="container-input2" class="container-inputSub InputStyle applyEffect" type="email" name="email" placeholder="e-mail" required>
+                    </div>
+                    <div class="container-input">
+                        <textarea id="container-input3" class="container-inputMessage InputStyle applyEffect" name="message" placeholder="message" required></textarea>
+                    </div>  
+                    <button id="container-buttom" type="submit">send</button>
+                </form>
+            </div>
         </div>
 
+        <footer>
+            <p>Alexandre rocha Queiroz</p>
+            <p>Intégration Web Bac+1</p>
+        </footer>
         <script type="module" src ="./index.js"></script>
         <script type="module" src="../forms/form1.js"></script>
         <script type="module" src="../forms/form2.js"></script>

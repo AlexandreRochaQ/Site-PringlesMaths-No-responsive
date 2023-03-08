@@ -27,13 +27,15 @@ document.getElementById("systemCalcules").innerHTML = `${systemCalc1} ${operator
             score++;
             answer1.innerHTML = `Your answer is correct !`;
             answer2.innerHTML = `+1 point! Your score : ${score}`;
-
+            
             recalculate();
             document.getElementById("systemCalcules").innerHTML = `${systemCalc1} ${operator} ${systemCalc2}`
-            
+
+            document.getElementById("systemCalcules").classList.add('title-effect');
             document.getElementsByClassName("applyEffect")[0].classList.add('answer-correct');
                 setTimeout(() => {
-                document.getElementsByClassName("applyEffect")[0].classList.remove('answer-correct');
+                    document.getElementById("systemCalcules").classList.remove('title-effect');
+                    document.getElementsByClassName("applyEffect")[0].classList.remove('answer-correct');
             }, 500);
         }
         else {
@@ -41,9 +43,11 @@ document.getElementById("systemCalcules").innerHTML = `${systemCalc1} ${operator
             answer1.innerHTML = `The answer was : ${systemCalc1} ${operator} ${systemCalc2} = ${resultComparation} <br>`;
             answer2.innerHTML = `You miscalculated ${incorrectAnswer} times!. High score: ${score}`;
 
+            document.getElementById("systemCalcules").classList.add('title-effect');
             document.getElementsByClassName("applyEffect")[0].classList.add('answer-incorrect');
             setTimeout(() => {
-            document.getElementsByClassName("applyEffect")[0].classList.remove('answer-incorrect');
+                document.getElementById("systemCalcules").classList.remove('title-effect');
+                document.getElementsByClassName("applyEffect")[0].classList.remove('answer-incorrect');
             }, 500);
 
             recalculate();
@@ -51,8 +55,18 @@ document.getElementById("systemCalcules").innerHTML = `${systemCalc1} ${operator
             document.getElementById("systemCalcules").innerHTML = `${systemCalc1} ${operator} ${systemCalc2}`
     
             if(score >= localStorage.getItem("score")) {
+
+                if(score != 0) {
+                    document.getElementById("scoreSection").classList.add('answer-correct');
+                setTimeout(() => {
+                    document.getElementById("scoreSection").classList.remove('answer-correct');
+                }, 1000);
+                }
+                
                 localStorage.setItem("score", score);
-                main();
+
+                document.getElementById("userScore").innerHTML = `[${nicknameMain}] score: ${score}`
+                
                 document.getElementsByClassName("applyEffect")[0].classList.add('answer-correct');
                 setTimeout(() => {
                 document.getElementsByClassName("applyEffect")[0].classList.remove('answer-correct');

@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
+/* ---------600(-)-------- */
 @media only screen and (max-width: 600px) {
 body {
     font-size: 16px;
@@ -10,12 +12,27 @@ body {
     width: 100%;
 }
 #scoreSection {
-    display: none;
+    position: absolute;
+    right: -410px;
+    transition: 0.3s;
+    padding: 0px;
+    width: 450px;
+    top: 60px;
+    text-decoration: none;
+    color: white;
+    border-radius: 0 0 0 10px;
+}
+#scoreSection:hover {
+    right: 0;
+}
+#scoreContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 #playSection {
     font-size: 30px;
     text-align: center;
-    margin-top: 100px;
 }
 #reponseSystem1 {
     margin-top: -10px;
@@ -27,54 +44,236 @@ body {
     margin-top: -75px;
     font-size: 15px;
 }
+#imgPub1 {
+    display: none;
 }
+}
+/* ---------600(-)-------- */
+/* ---------600+---------- */
+@media only screen and (min-width: 800px) {
+    body {
+        font-size: 18px;
+    }
+    #hideForm1, #hideForm2 {
+        display: inline-block;
+        vertical-align: top;
 
-@media only screen and (min-width: 601px) {
-body {
-    font-size: 18px;
+        font-size: 25px;
+    }
+    #userScore {
+        font-size: 20px;
+    }
+    #scoreSection {
+        position: absolute;
+        right: -290px;
+        transition: 0.3s;
+        padding: 0px;
+        width: 400px;
+        top: 60px;
+        text-decoration: none;
+        color: white;
+        border-radius: 0 0 0 10px;
+    }
+    #scoreSection:hover {
+        right: 0;
+    }
+    #playTitle {
+        font-size: 90px;
+        padding: 0%;
+        margin-bottom: 40px;
+    }
+    #playSection {
+        font-size: 50px;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    #playEdit {
+        margin-bottom: 100px;
+    }
+    #reponseSystem1 {
+        margin-top: -10px;
+        font-size: 40px;
+        font-weight: 300;
+    }
+    #reponseSystem2 {
+        font-weight: 300;
+        margin-top: -120px;
+        font-size: 20px;
+    }
+    .styleHighScore {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: -40px;
+        margin-left: 100px;
+    }
+    #imgPub1 {
+        width: 550px;
+        height: auto;
+    
+        position: fixed;
+        top: 460px;
+        right: 0;
+        }
+    
+    #imgPub2 {
+        width: 550px;
+        height: auto;
+    
+        position: fixed;
+        top: 350px;
+        left: 0;
+    }
 }
-#hideForm1, #hideForm2 {
-    display: inline-block;
-    width: 50%;
-    vertical-align: top;
-    font-size: 25px;
-    margin-top: 10px;
+/* ---------600+---------- */
+/* ---------999+---------- */
+@media only screen and (min-width: 999px) {
+    body {
+        font-size: 18px;
+    }
+    #hideForm1, #hideForm2{
+        position: absolute;
+        top: 70px;
+        left: 45px;
+    }
+    #userScore {
+        font-size: 20px;
+    }
+    #scoreSection {
+        position: absolute;
+        right: -290px;
+        transition: 0.3s;
+        padding: 0px;
+        width: 400px;
+        top: 60px;
+        text-decoration: none;
+        color: white;
+        border-radius: 0 0 0 10px;
+    }
+    #scoreSection:hover {
+        right: 0;
+    }
+    #playTitle {
+        font-size: 90px;
+        padding: 0%;
+        margin-bottom: 40px;
+    }
+    #playSection {
+        font-size: 50px;
+        text-align: center;
+        margin-top: -130px;
+        margin-bottom: 40px;
+    }
+    #playEdit {
+        margin-bottom: 100px;
+    }
+    #reponseSystem1 {
+        font-size: 40px;
+        font-weight: 300;
+    }
+    #reponseSystem2 {
+        font-weight: 300;
+        margin-top: -110px;
+        font-size: 20px;
+    }
+    .styleHighScore {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: -40px;
+        margin-left: 100px;
+    }
+    nav {
+        margin: 0 0;
+        display: flex;
+        align-items:start;
+        justify-content:space-between;
+    }
+    ul {
+        list-style: none;
+        display: flex;
+    }
+    li {
+        margin: 0 10px;
+    }
+    a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    a:hover {
+        color: #ffbb00;
+    }
+    #imgPub1 {
+        width: 500px;
+        height: auto;
+        top: 350px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    #imgPub2 {
+        width: 550px;
+        height: auto;
+    
+        position: absolute;
+        display: flex;
+        top: 360px;
+
+    }
+    #imgPub3 {
+        z-index: 1;
+        width: 50%;
+        height: auto;
+        top: 38px;
+    }
+    #reponses {
+        margin-top: 30px;
+    }
+
+    /* ----- about us 999 ------*/
+
+    #container2-text {
+        display: flex;
+        justify-content: right;
+        align-items: center;
+
+        font-family: 'Fredoka One', cursive;
+        font-weight: 400;
+        font-size: 25px;
+        margin-right: 30px;
+        margin-top: 100px;
+        color: #fff;
+        text-align: left;
+    }
+
+    /* ----- contact Us 999 ---- */
+    
+    #container3-title {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        padding-bottom: 60px;
+
+        color: #fff;
+        text-shadow: 2px 2px black;
+    }
+    #container3-text {
+        display: flex;
+        justify-content:center;
+        text-align: center;
+
+        color: black;
+    }
 }
-#userScore {
-    font-size: 20px;
-    margin-top: -30px;
-}
-#scoreSection{
-    display: inline-block;
-    width: 30%;
-    text-align: right;
-    flex-direction: row;
-    font-size: 25px;
-    margin-top: -38px;
-}
-#playTitle {
-    font-size: 90px;
-    padding: 0%;
-    margin-bottom: 2px;
-}
-#playSection {
-    font-size: 50px;
-    text-align: center;
-    margin-top: -65px;
-}
-#reponseSystem1 {
-    margin-top: -10px;
-    font-size: 40px;
-    font-weight: 300;
-}
-#reponseSystem2 {
-    font-weight: 300;
-    margin-top: -120px;
-    font-size: 20px;
-}
-#styleHighScore {
-    margin-left: 0;
-}
+/* ---------999+---------- */
+#scoreContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 body {
@@ -82,59 +281,153 @@ body {
     padding: 0;
     font-family: 'Mitr', sans-serif;
     font-weight: 500;
-    background-color: hsl(33, 100%, 86%);
-    color: #000000;
-    text-shadow: 0.5px 0.5px white;
+    background-color:#FFD222; 
+    overflow-x: hidden;
+}
+header {
+    background-color: #e4022d;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    align-content: space-between;
+}
+footer {
+    background-color: #fff;
+    padding: 80px;
+}
+#container2-content {
+    display: flex;
+    flex-direction: row-reverse;
+}
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #940822;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #670416;
+}
+::-webkit-scrollbar-track {
+    background-color: #ffcf22;
+    border-radius: #fff;
+}
+#playSection {
+    z-index: 3;
+}
+.background-image {
+    position: relative;
+}
+#imgPub1 {
+    z-index: 2;
+}
+#imgPub2 {
+    z-index: 1;
+}
+.container-2 {
+    z-index: 1;
+}
+.container-3 {
+    z-index: 1;
+}
+#imgLogoSVG {
+    position: relative;
+    margin-top: 60px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
 }
 
-#titleScore, 
+#imgScore {
+    width: 18%;
+    margin-bottom: -40px;
+}
+#scoreSection {
+    background-color: #e4022d;
+}
+#titleScore {
+    margin-left: 40px;
+    font-family: 'Fredoka One', cursive;
+    font-weight: 400;
+    font-size: 40px;
+    color: #fff;
+    text-shadow: 0.5px 0.5px rgb(0, 0, 0);
+}
 #userScore  {
     font-weight: 400;
+    color: #fff;
+    text-shadow: 0.5px 0.5px rgb(0, 0, 0);
 }
 #hideForm1, #hideForm2 {
     font-size: 15px;
     font-weight: 400;
+    width: 22%;
+    color: #fff;
+    text-shadow: 0.5px 0.5px rgb(0, 0, 0);
+}
+#playTitle {
+    color: #fff;
+    text-shadow: 5px 5px rgb(0, 0, 0);
 }
 #systemCalcules {
     font-family: 'Lato', sans-serif;    
     font-weight: 700;
-}
-.titleID {
-    font-family: 'Mitr', sans-serif;
-    font-weight: 400;
-    font-size: 45px;
+    color: #fff;
+    text-shadow: 5px 5px rgb(0, 0, 0);
 }
 
-#header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.titleID {
+    font-family: 'Fredoka One', cursive;
+    font-weight: 400;
+    font-size: 40px;
 }
+
+#reponses {
+    position: relative;
+    display: inline-block;
+    font-family: 'Fredoka One', cursive;
+    font-weight: 400;
+    font-size: 40px;
+}
+
 .container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-left: 10px;
 }
-#styleHighScore {
-    display: flex;
-    align-items: center;
+.container-2 {
+    position: relative;
+    top: 20px;
+    padding-bottom: 30px;
+    left: 0;
+    right: 0;
+    background-color: #e4022d;
+    width: 100%;
+    overflow: hidden;
 }
-
+.container-3 {
+    position: relative;
+    top: 80px;
+    padding-bottom: 400px;
+    left: 0;
+    right: 0;
+    background-color: #009e80;
+    width: 100%;
+    overflow: auto;
+}
 #resetScore {
     display: inline-block;
     vertical-align: middle;
-    position: fixed;
-    right: 0;
 }
 .headers {
-    background-color: hsl(33, 100%, 86%);
-    margin-right: 10px;
-    margin-left: 20px;
-    color: #000000;
-}
+    width: 100%;
+}   
 #formOperators {
-    margin-top: -50px;
+    margin-top: -80px;
 }
 #form2 {
     margin-top: -80px;
@@ -146,15 +439,49 @@ body {
 }
 #salutations {
     margin-top: -0px;
- }
- #username {
-     width: 95.9px;
-     height: 13px;
- }
- #userAnswerInput {
-     width: 130px;
-     height: 13px;
 }
+#username {
+    width: 95.9px;
+    height: 13px;
+}
+#userAnswerInput {
+    width: 160px;
+    height: 20px;
+}
+.container3-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container-input {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5px;
+}
+#container-input1 {
+    margin-right: 3px;
+}
+#container-buttom {
+    background-color: #fff;
+    width: 100%;
+    margin-left: -1px;
+}
+#container-buttom:hover {
+    background-color: #e4022d;
+    color: #fff;
+    text-shadow: none;
+}
+.container-inputSub {
+    display: inline-block;
+    width: 400px;
+    height: 40px;
+}
+.container-inputMessage {
+    width: 100%;
+    height: 400px;
+}
+
 
 button {
     margin: 0 10px;
@@ -166,33 +493,25 @@ button {
     border-color: #00000000;
     text-shadow: 0.5px 0.5px rgb(255, 255, 255);
     color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+#reponses {
+    color: #fff;
+    text-shadow: 2px 2px black;
 }
 
-.fade-text {
+#scoreSection.answer-correct {
+    background-color: rgb(20, 220, 140);
+}
+#systemCalcules.title-effect {
     color: rgb(0, 0, 0);
-    animation: fade 2s infinite;
+    text-shadow: 5px 5px #fff;
 }
-@keyframes fade {
-    0% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0.7;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
 .answer-correct {
     background-color: rgb(20, 220, 140);
-    text-shadow: 0.5px 0.5px rgb(0, 0, 0);
-    color: rgb(20, 220, 140);
 }
 .answer-incorrect {
     background-color: rgb(220, 20, 60);
-    text-shadow: 0.5px 0.5px rgb(0, 0, 0);
-    color:rgb(220, 20, 60);
 }
 
 option {
@@ -231,10 +550,11 @@ option {
 #resetScore {
     width: 33px;
     height: 27px;
-    margin-top: -49px;
 }
 #sendInput {
     margin-left: -10px;
+    height: 30px;
+    width: 30px;
 }
 #operatorInput, #difficultLevel {
     font-size: 10px;

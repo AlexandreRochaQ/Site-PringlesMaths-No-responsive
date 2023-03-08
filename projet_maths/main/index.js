@@ -3,11 +3,11 @@ export var scoreMain = localStorage.getItem("score");
 
 export function main() {
     if(scoreMain == null && nicknameMain == null) {
-        document.getElementById("userScore").innerHTML = `It's so cold and empty here :'(`
+        document.getElementById("userScore").innerHTML = `It's empty here`
     } else if (nicknameMain == null) {
-        document.getElementById("userScore").innerHTML = `Hey anonymous, your high score was: ${scoreMain}`
+        document.getElementById("userScore").innerHTML = `Your score: ${scoreMain}`
     } else if(scoreMain == null)  {
-        document.getElementById("userScore").innerHTML = `${nicknameMain}, play to show your score` 
+        document.getElementById("userScore").innerHTML = `Go play!` 
     } else {
         document.getElementById("userScore").innerHTML = `[${nicknameMain}] score: ${scoreMain}`
     }
